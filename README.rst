@@ -15,6 +15,8 @@ If you get an error during building, then try to clone the original repository (
 
 Then build in the directory of the original project (`obs-studio`).
 
+Before running it, backup your OBS configuration. If you don't see the extra 6 tracks or you get errors, then try to delete the OBS configuration. Note that in Advanced Audio Settings you will need to scroll right to see the extra tracks.
+
 OBS Studio <https://obsproject.com>
 ===================================
 
