@@ -2234,6 +2234,8 @@ int AdvancedOutput::GetAudioBitrate(size_t i, const char *id) const
 	static const char *names[] = {
 		"Track1Bitrate", "Track2Bitrate", "Track3Bitrate",
 		"Track4Bitrate", "Track5Bitrate", "Track6Bitrate",
+		"Track7Bitrate", "Track8Bitrate", "Track9Bitrate",
+		"Track10Bitrate", "Track11Bitrate", "Track12Bitrate",
 	};
 	int bitrate = (int)config_get_uint(main->Config(), "AdvOut", names[i]);
 	return FindClosestAvailableAudioBitrate(id, bitrate);
