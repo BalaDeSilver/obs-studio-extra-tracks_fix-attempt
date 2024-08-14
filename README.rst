@@ -1,3 +1,20 @@
+IMPORTANT
+=========
+
+This is a fork of OBS studio that adds 6 extra tracks (for a total of 12). I do not intend to maintain this and merge updates. If you require the latest version of OBS, either manually merge it into here or apply the `changes <https://github.com/obsproject/obs-studio/commit/bf15c81367e2151ccd6560cad9ef170062764fd1>`_ in the latest version.
+
+If you get an error during building, then try to clone the original repository (or `the last commit before this fork <https://github.com/aayla-secura/obs-studio-extra-tracks/commit/1e6c375e95fe982bdeadf671edf1df420dd8d5bc>`_). Then apply a patch:
+
+.. code-block:: sh
+
+   cd obs-studio-extra-tracks/
+   git format-patch 1e6c375e95fe982bdeadf671edf1df420dd8d5bc
+   cp 0001-Increased-number-of-tracks-from-6-to-12.patch ../obs-studio/
+   cd ../obs-studio/
+   git am 0001-Increased-number-of-tracks-from-6-to-12.patch
+
+Then build in the directory of the original project (`obs-studio`).
+
 OBS Studio <https://obsproject.com>
 ===================================
 
