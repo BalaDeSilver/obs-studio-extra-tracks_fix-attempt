@@ -80,6 +80,34 @@
         "ENABLE_WEBRTC": false
       }
     },
+        {
+      "name": "garuda",
+      "displayName": "Garuda",
+      "description": "obs-studio for Garuda Linux",
+      "inherits": ["environmentVars"],
+      "condition": {
+        "type": "equals",
+        "lhs": "${hostSystemName}",
+        "rhs": "Linux"
+      },
+      "binaryDir": "${sourceDir}/build_garuda",
+      "generator": "Ninja",
+      "warnings": {"dev": true, "deprecated": true},
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug",
+        "CMAKE_INSTALL_LIBDIR": "lib/CMAKE_SYSTEM_PROCESSOR-linux-gnu",
+        "CMAKE_INSTALL_PREFIX":"/usr",
+        "OBS_CMAKE_VERSION": {"type": "STRING", "value": "3.0.0"},
+        "ENABLE_AJA": false,
+        "ENABLE_NVENC": true,
+        "ENABLE_FFMPEG_NVENC": true,
+        "ENABLE_VLC": true,
+        "ENABLE_WAYLAND": true,
+        "ENABLE_WEBRTC": true,
+        "ENABLE_BROWSER": true,
+        "CEF_ROOT_DIR":"/mnt/Disco Local E/Downloads/cef_binary_6533_linux_x86_64/"
+      }
+    },
     {
       "name": "ubuntu-ci",
       "inherits": ["ubuntu"],
